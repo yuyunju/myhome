@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학생 홈페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>대학생 홈페이지에 오신 것을 환영합니다</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">소개</a></li>
+                <li><a href="#bulletin-board">게시판</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="introduction">
+        <h2>소개</h2>
+        <p>이곳은 대학생 홈페이지로, 다양한 활동, 행사, 공지사항 정보를 확인할 수 있습니다.</p>
+    </section>
+    
+    <section id="bulletin-board">
+        <h2>게시판</h2>
+        <div id="posts"></div>
+        <input type="text" id="postInput" placeholder="새 글을 입력하세요">
+        <button id="addPostButton">글 등록</button>
+        <!-- 게시글이 없을 때 안내 메시지 -->
+        <p id="noPostsMsg">아직 게시글이 없습니다.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 대학생 홈페이지</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

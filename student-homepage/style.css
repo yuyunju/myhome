@@ -1,0 +1,124 @@
+body {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #fffbe7;
+    padding: 30px 0 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(67, 198, 172, 0.08);
+}
+
+header h1 {
+    margin: 0;
+    color: #43c6ac;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #43c6ac;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #f8b500;
+}
+
+section {
+    background: rgba(255,255,255,0.85);
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 18px;
+    max-width: 600px;
+    box-shadow: 0 4px 24px rgba(67, 198, 172, 0.10);
+}
+
+#bulletin-board h2 {
+    color: #43c6ac;
+    margin-bottom: 18px;
+}
+
+#posts {
+    margin-bottom: 18px;
+}
+
+.post {
+    background: #e0fff3;
+    border-radius: 10px;
+    padding: 13px 18px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px rgba(67, 198, 172, 0.07);
+    transition: background 0.2s;
+}
+
+.post:hover {
+    background: #b2f7ef;
+}
+
+#postInput {
+    width: 70%;
+    padding: 10px;
+    border: 1.5px solid #43c6ac;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-right: 8px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#postInput:focus {
+    border: 1.5px solid #f8b500;
+}
+
+#addPostButton {
+    background: linear-gradient(90deg, #43c6ac 60%, #f8ffae 100%);
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+#addPostButton:hover {
+    background: linear-gradient(90deg, #f8b500 60%, #43c6ac 100%);
+    color: #fff;
+}
+
+#noPostsMsg {
+    color: #aaa;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: #fffbe7;
+    color: #43c6ac;
+    margin-top: 40px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(67, 198, 172, 0.08);
+}
