@@ -3,29 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>AI 면접 여부 검색기</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>기업명을 입력하세요</h2>
-  <input type="text" id="searchInput" placeholder="예: 삼성전자">
-  <button onclick="searchCompany()">검색</button>
-  <p id="result"></p>
-
+  <section>
+    <h2>기업명을 입력하세요</h2>
+    <input type="text" id="searchInput" placeholder="예: 삼성전자">
+    <button onclick="searchCompany()">검색</button>
+    <p id="result"></p>
+  </section>
   <script>
     const companyData = {
       "삼성전자": true,
@@ -66,16 +52,30 @@
       const input = document.getElementById("searchInput").value.trim();
       const resultEl = document.getElementById("result");
 
+      if (!input) {
+        resultEl.innerText = "기업명을 입력해주세요.";
+        resultEl.style.color = "#f8b500";
+        return;
+      }
+
       if (input in companyData) {
         if (companyData[input]) {
           resultEl.innerText = input + "는 AI 면접을 실시하고 있습니다.";
+          resultEl.style.color = "#43c6ac";
         } else {
           resultEl.innerText = input + "는 AI 면접을 실시하지 않습니다.";
+          resultEl.style.color = "#f44336";
         }
       } else {
         resultEl.innerText = "데이터에 해당 기업 정보가 없습니다.";
+        resultEl.style.color = "#aaa";
       }
     }
+
+    // 엔터키로도 검색 가능하게
+    document.getElementById("searchInput").addEventListener("keydown", function(e) {
+      if (e.key === "Enter") searchCompany();
+    });
   </script>
 </body>
 </html>

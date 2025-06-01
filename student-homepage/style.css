@@ -1,21 +1,21 @@
 body {
     font-family: 'Noto Sans KR', Arial, sans-serif;
-    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    background: linear-gradient(135deg, #fffbe7 0%, #f8b500 100%);
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 header {
-    background: #fffbe7;
+    background: #fff;
     padding: 30px 0 15px 0;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(67, 198, 172, 0.08);
+    box-shadow: 0 2px 8px rgba(248, 181, 0, 0.08);
 }
 
 header h1 {
     margin: 0;
-    color: #43c6ac;
+    color: #f8b500;
     font-size: 2.2em;
     letter-spacing: 2px;
 }
@@ -31,27 +31,27 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #43c6ac;
+    color: #f8b500;
     font-weight: bold;
     font-size: 1.1em;
     transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #f8b500;
+    color: #ff9800;
 }
 
 section {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.95);
     margin: 40px auto;
     padding: 30px 25px;
     border-radius: 18px;
     max-width: 600px;
-    box-shadow: 0 4px 24px rgba(67, 198, 172, 0.10);
+    box-shadow: 0 4px 24px rgba(248, 181, 0, 0.10);
 }
 
 #bulletin-board h2 {
-    color: #43c6ac;
+    color: #f8b500;
     margin-bottom: 18px;
 }
 
@@ -60,37 +60,38 @@ section {
 }
 
 .post {
-    background: #e0fff3;
+    background: #fffbe7;
     border-radius: 10px;
     padding: 13px 18px;
     margin-bottom: 10px;
     color: #333;
     font-size: 1.08em;
-    box-shadow: 0 2px 8px rgba(67, 198, 172, 0.07);
+    box-shadow: 0 2px 8px rgba(248, 181, 0, 0.07);
     transition: background 0.2s;
 }
 
 .post:hover {
-    background: #b2f7ef;
+    background: #ffe0a3;
 }
 
 #postInput {
     width: 70%;
     padding: 10px;
-    border: 1.5px solid #43c6ac;
+    border: 1.5px solid #f8b500;
     border-radius: 8px;
     font-size: 1em;
     margin-right: 8px;
     outline: none;
     transition: border 0.2s;
+    background: #fff;
 }
 
 #postInput:focus {
-    border: 1.5px solid #f8b500;
+    border: 1.5px solid #ff9800;
 }
 
 #addPostButton {
-    background: linear-gradient(90deg, #43c6ac 60%, #f8ffae 100%);
+    background: linear-gradient(90deg, #f8b500 60%, #fffbe7 100%);
     color: #333;
     border: none;
     border-radius: 8px;
@@ -102,7 +103,7 @@ section {
 }
 
 #addPostButton:hover {
-    background: linear-gradient(90deg, #f8b500 60%, #43c6ac 100%);
+    background: linear-gradient(90deg, #ff9800 60%, #fffbe7 100%);
     color: #fff;
 }
 
@@ -115,10 +116,10 @@ section {
 footer {
     text-align: center;
     padding: 18px 0;
-    background: #fffbe7;
-    color: #43c6ac;
+    background: #fff;
+    color: #f8b500;
     margin-top: 40px;
     font-size: 1em;
     letter-spacing: 1px;
-    box-shadow: 0 -2px 8px rgba(67, 198, 172, 0.08);
+    box-shadow: 0 -2px 8px rgba(248, 181, 0, 0.08);
 }
