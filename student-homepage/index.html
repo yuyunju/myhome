@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대학생 홈페이지</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>AI 면접 여부 검색기</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>대학생 홈페이지에 오신 것을 환영합니다</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">소개</a></li>
-                <li><a href="#bulletin-board">게시판</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="introduction">
-        <h2>소개</h2>
-        <p>이곳은 대학생 홈페이지로, 다양한 활동, 행사, 공지사항을 확인할 수 있습니다.</p>
-    </section>
-    
-    <section id="bulletin-board">
-        <h2>게시판</h2>
-        <div id="posts"></div>
-        <input type="text" id="postInput" placeholder="새 글을 입력하세요">
-        <button id="addPostButton">글 등록</button>
-        <!-- 게시글이 없을 때 안내 메시지 -->
-        <p id="noPostsMsg">아직 게시글이 없습니다.</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 대학생 홈페이지</p>
-    </footer>
+  <h2>기업명을 입력하세요</h2>
+  <input type="text" id="searchInput" placeholder="예: 삼성전자">
+  <button onclick="searchCompany()">검색</button>
+  <p id="result"></p>
 
-    <script src="script.js"></script>
+  <script>
+    const companyData = {
+      "삼성전자": true,
+      "현대자동차": false,
+      "LG전자": true,
+      "네이버": true,
+      "카카오": false,
+      "SK하이닉스": true,
+      "롯데백화점": false,
+      "CJ제일제당": false,
+      "KT": true,
+      "대한항공": true,
+      "아시아나항공": false,
+      "신한은행": true,
+      "국민은행": true,
+      "우리은행": false,
+      "하나은행": true,
+      "포스코": true,
+      "한화": false,
+      "두산": false,
+      "GS건설": true,
+      "한진": false,
+      "넷마블": true,
+      "NC소프트": true,
+      "게임빌": false,
+      "펄어비스": true,
+      "셀트리온": false,
+      "삼성바이오로직스": true,
+      "유한양행": false,
+      "동아제약": false,
+      "LG화학": true,
+      "SK이노베이션": true,
+      "현대모비스": true
+      // ... 여기에 추가로 70개 이상 입력 가능
+    };
+
+    function searchCompany() {
+      const input = document.getElementById("searchInput").value.trim();
+      const resultEl = document.getElementById("result");
+
+      if (input in companyData) {
+        if (companyData[input]) {
+          resultEl.innerText = input + "는 AI 면접을 실시하고 있습니다.";
+        } else {
+          resultEl.innerText = input + "는 AI 면접을 실시하지 않습니다.";
+        }
+      } else {
+        resultEl.innerText = "데이터에 해당 기업 정보가 없습니다.";
+      }
+    }
+  </script>
 </body>
 </html>
